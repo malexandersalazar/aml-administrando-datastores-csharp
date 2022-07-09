@@ -1,0 +1,2 @@
+# aml-registrando-datasets-csharp-azurecore
+ Para experimentar con Datasets propios en Azure Machine Learning, necesitamos saber cómo registrarlos en algún Datastore. Esto se puede lograr fácilmente desde la interfaz de Azure e incluso con el SDK para Python que tiene múltiples ejemplos disponibles, pero no ocurre lo mismo con CSharp. En esta guía lograremos ello consumiendo la REST API de AML trabajando con Azure.Core y CSharp.
