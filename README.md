@@ -4,11 +4,15 @@ El Datastore representa una abstracción de almacenamiento sobre una cuenta de a
 
 Administrarlos desde la interfaz de Azure Machine Learning Studio e incluso con el SDK de Python, que tiene múltiples ejemplos disponibles, es muy sencillo; como en la documentación oficial de Microsoft no hay ejemplos para C#, en esta ocasión lo resolveremos consumiendo la REST API de Azure Machine Learning con nuestro amado lenguaje a través de un flujo de autenticación del tipo **client_credentials**.
 
+## Configuración
+
+Este proyecto se desarrolló en C# 10 usando **Azure Machine Learning API version 2022-05-01**.
+
 ## Recuperar un token de autenticación de service principal
 
-Empezamos registramos nuestra aplicación cliente en la sección de **App registrations** de nuestro **Azure Active Directory**.
+Empezamos registrando nuestra aplicación cliente en la sección de **App registrations** de nuestro **Azure Active Directory**.
 
-Luego, con la nueva aplicación registrada, generamos un nuevo **Client secret** y seguido de ello ingresamos al **Access control (IAM)** del recurso **Azure Machine Learning Workspace** para asignar a nuestra aplicación como **service principal** con rol de **Contributor**.
+Luego, con la nueva aplicación registrada, generamos un nuevo **Client secret** para seguido de ello ingresar al **Access control (IAM)** de nuestro recurso de **Azure Machine Learning Workspace** y asignar a nuestra aplicación como **service principal** con rol de **Contributor**.
 
 Con esto establecido ya podemos recuperar nuestro token de acceso a través del siguiente código en C#:
 
